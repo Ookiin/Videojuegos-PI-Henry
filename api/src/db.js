@@ -5,7 +5,7 @@ const axios = require('axios');
 const path = require('path');
 const {DB_USER, DB_PASSWORD, DB_HOST, API_KEY, DB_NAME} = process.env;
 let sequelize = 
-  process.env.NODE_ENV === "videogames"
+  process.env.NODE_ENV === "production"
   ? new Sequelize({
     database: DB_NAME,
     dialect: 'postgres',
