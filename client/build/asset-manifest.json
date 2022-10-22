@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c738eab6.chunk.css",
+    "main.js": "/static/js/main.19d12472.chunk.js",
+    "main.js.map": "/static/js/main.19d12472.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c3ed0d06.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c3ed0d06.js.map",
+    "static/js/2.9d9e9319.chunk.js": "/static/js/2.9d9e9319.chunk.js",
+    "static/js/2.9d9e9319.chunk.js.map": "/static/js/2.9d9e9319.chunk.js.map",
+    "static/js/3.2f83c7f3.chunk.js": "/static/js/3.2f83c7f3.chunk.js",
+    "static/js/3.2f83c7f3.chunk.js.map": "/static/js/3.2f83c7f3.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.c738eab6.chunk.css.map": "/static/css/main.c738eab6.chunk.css.map",
+    "static/js/2.9d9e9319.chunk.js.LICENSE.txt": "/static/js/2.9d9e9319.chunk.js.LICENSE.txt",
+    "static/media/LandingPage.module.css": "/static/media/19948122.f4e3e4c6.jpg",
+    "static/media/AddVideogame.module.css": "/static/media/48963-call-of-duty-modern-warfare-3-soldiers-guns.9649ac1d.jpg",
+    "static/media/Loader.module.css": "/static/media/950245.bc73aa71.jpg",
+    "static/media/VideoGameDetails.module.css": "/static/media/gaming.665755b3.jpg",
+    "static/media/HomePage.module.css": "/static/media/gaming2.0323e1b7.jpg",
+    "static/media/error.module.css": "/static/media/notFound.e1af3acb.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c3ed0d06.js",
+    "static/js/2.9d9e9319.chunk.js",
+    "static/css/main.c738eab6.chunk.css",
+    "static/js/main.19d12472.chunk.js"
+  ]
+}

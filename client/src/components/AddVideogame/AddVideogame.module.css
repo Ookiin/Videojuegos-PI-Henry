@@ -1,0 +1,198 @@
+
+
+.page {
+    background-image: url(../../img/48963-call-of-duty-modern-warfare-3-soldiers-guns.jpg);
+    background-size: cover;
+    height: 800px;
+    border-top: 1px solid white;
+}
+
+.card {
+    width: 800px;
+    margin:2% auto;
+    /* border: 1px solid red; */
+}
+
+.titulo {
+    color:black;
+    position: relative;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    text-shadow: 4px 4px white;
+    font-size: 60px;
+    /* border: 1px solid red; */
+}
+.formArea {
+  display:flex;
+  /* background-color: #FFE53B;
+background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%); */
+  border-radius: 25px;
+  padding: 1.9em;
+  /* border: 3px solid blue; */
+  background-color: rgba(255, 255, 255, 0,060);
+    backdrop-filter: blur(1rem);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+h3{
+    margin: 0px;
+    color: white;
+    /* border: 1px solid red; */
+}
+
+.descriptionArea{
+    display:flex;
+    flex-direction: column;
+    order: 2;
+    /* border: 1px solid red; */
+}
+
+.descriptionArea > textarea {
+    flex: 1;
+    min-width: 18em;
+    background: transparent;
+    color: white;
+    padding: 15px;
+    border: 2px solid white;
+    font-size: 18px;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    /* border: 1px solid red; */
+}
+
+.detailsArea {
+    flex: 1;
+    order: 1;
+    margin-right: 2em;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+
+    /* border: 1px solid red; */
+}
+
+.detailsArea input {
+    width: 100%;
+    background: transparent; 
+    color: white;
+    border-radius: 40px;
+    border: 2px solid white;
+    font-size: 20px;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+
+label {
+    color: white;
+    line-height: 30px;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+ul {
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.error {
+    border: 3px solid red;
+    color:rgb(145, 6, 34);
+}
+
+.bot {
+    appearance: none;
+    background-color: #000000;
+    border: 2px solid #1A1A1A;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 6px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    will-change: transform;
+    margin-right: 20px;
+  }
+  
+  .bot:disabled {
+    pointer-events: none;
+  }
+  
+  .bot:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+    background-color: white;
+    color: black;
+  }
+  
+  .bot:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
+  .bot2 {
+    appearance: none;
+    background-color: #000000;
+    border: 2px solid #1A1A1A;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 6px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;    
+    will-change: transform;
+  }
+  
+  .bot2:disabled {
+    pointer-events: none;
+  }
+  
+  .bot2:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+    background-color: white;
+    color: black;
+  }
+  
+  .bot2:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
+  .platform {
+    background-color: black;
+    color: white;
+    margin-left: 10px;
+  }
+
+  .genres {
+    background-color: black;
+    color: white;
+    margin-left: 10px;
+  }
