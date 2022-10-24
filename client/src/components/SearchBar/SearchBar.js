@@ -17,9 +17,13 @@ export default function SearchBar() {
     }
 
     function handleSubmit(e) {
-        e.preventDefault()    
-        dispatch(getvgbyname(name)) 
-        setName("")       
+        try {
+        e.preventDefault() 
+        dispatch(getvgbyname(name))
+        setName("")
+        } catch (error) {
+            alert("No se encontro el juego", error)
+        }      
     }
 
 

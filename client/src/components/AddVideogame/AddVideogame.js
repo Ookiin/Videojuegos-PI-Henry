@@ -27,7 +27,7 @@ function validate(input) {
 
     } else if (input.genre.length === 0) {
         errors.genre = 'Se requiere minimo un Genre'
-
+    
     }
     return errors 
 }
@@ -49,7 +49,6 @@ export default function AddVideogame() {
     const [errors,setErrors] =  useState({})
     let allgenres = useSelector((state) => state.genres) 
     let allplatforms = useSelector((state) => state.platforms)
-  
 
     allgenres = allgenres.filter(p => p !== 'All')
 
@@ -87,7 +86,7 @@ export default function AddVideogame() {
             {return alert('Formato erroneo de Release Date, deberia ser DD-MM-YYYY o D-M-YYYY')}
          if (!input.rating) {return alert('Rating es requerido')}
          if (!/^(?:[1-9]\d{0,2}(?:,\d{3})*|0)(?:\.\d+)?$/.test(input.rating) || 
-            input.rating <0 || input.rating >5) 
+            input.rating < 0 || input.rating > 5) 
             {return alert('Formato erroneo de Rating, deberia ser un numero entre 0-5')
          }
          if (input.platform.length === 0) {return alert('La Platform es requerida')}
@@ -163,7 +162,7 @@ return (
                         <label>Platforms:</label>   
                         <select className={stl.platform} onChange={handlePlatforms}>
                         {allplatforms.sort().map(p => {
-                        return <option value={p} key={p}>{p}</option>
+                        return <option value={p}>{p}</option>
                         })}
                         </select>
 
@@ -173,7 +172,7 @@ return (
                         <label>Genres:</label>
                         <select className={stl.genres} onChange={handleGenres}>
                         {allgenres.sort().map(p => {
-                        return <option value={p} key={p.id}>{p}</option>
+                        return <option value={p}>{p}</option>
                         })}
                         </select>
 

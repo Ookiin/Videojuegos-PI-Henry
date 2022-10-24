@@ -2,7 +2,7 @@ import React from 'react';
 import stl from './Paging.module.css';
 
 
-export default function Paging({vgamesPerPage, allVgames, actualPage}) {
+export default function Paging({vgamesPerPage, allVgames, actualPage, currentPage}) {
 
     const pageNumbers = []
     const maxpage = Math.ceil(allVgames/vgamesPerPage)
@@ -19,7 +19,7 @@ export default function Paging({vgamesPerPage, allVgames, actualPage}) {
 
                         <li className={stl.pagenr} key={num}>
 
-                            <button id={stl.lala} onClick={() => actualPage(num)}>{num}</button> 
+                            <button id={stl.lala} onClick={() => actualPage(num)}>{num}</button>
                             
                         </li>
 

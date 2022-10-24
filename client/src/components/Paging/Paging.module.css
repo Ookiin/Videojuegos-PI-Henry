@@ -50,12 +50,20 @@
 #lala:hover {
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-4px);
+  background-color: white;
+  color: black;
 }
 
 #lala:active {
-  background-color: black;
+  background-color: white;
+  color: black;
   box-shadow: 2px 2px black;
   transform: translateY(-4px);
+}
+
+#lala:focus {
+  background-color: white;
+  color: black;
 }
 
 

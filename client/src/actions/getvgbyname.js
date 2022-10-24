@@ -16,3 +16,6 @@ export default function getvgbyname(name) {
             window.location.replace("/videogames");
          }                                                                                                  
     }}
+
+
+   

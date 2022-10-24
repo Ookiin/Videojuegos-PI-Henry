@@ -16,7 +16,6 @@ import sortvgames from '../../actions/sortvgames';
 import getvideogames from '../../actions/getvideogames';
 import getgenres from '../../actions/getgenres';
 
-
 export default function HomePage () {
 
     const dispatch = useDispatch();
@@ -84,9 +83,11 @@ export default function HomePage () {
                   <div>
                     <button className={stl.botonHeader} onClick={e => {handleShowAll(e)}}>Cargar todos los Juegos</button>
                   </div>
+
                   <div>           
                     <SearchBar/>
                   </div>
+
                   <div>   
                     <Link to='/videogame'>
                       <button className={stl.botonHeader}>Crear Juego</button>
@@ -96,11 +97,12 @@ export default function HomePage () {
               </div>
 
               <div className={stl.filtros}>
+
                 <div>                    
                   <select className={stl.filterOrder} onChange={e => handleGenreFilter(e)}>
-                    {allgenres.sort().map(e => {
+                    { allgenres.sort().map(e => {
                       return <option value={e} key={e}>{e}</option>
-                    })}      
+                    }) }      
                   </select>
                 </div>
 
@@ -128,9 +130,9 @@ export default function HomePage () {
             </div>
         </div>    
 
-          <div className={stl.paginado}>
+              <div className={stl.paginado}>
 
-                <Paging vgamesPerPage={vgamesPerPage} allVgames={allVgames.length} currpage={currentPage} actualPage={actualPage}/>
+                  <Paging vgamesPerPage={vgamesPerPage} allVgames={allVgames.length} currpage={currentPage} actualPage={actualPage}/>
 
               </div>
 
@@ -138,26 +140,20 @@ export default function HomePage () {
 
                 {currentVgames && currentVgames.map(p => {
                            
-                    return (
-                                              
+                    return (                                          
                           <Link to ={"/videogame/" + p.id} key={p.id}>
                              <Vgcard 
                              id={p.id}
-                             name= {p.name} 
-                             image= {p.image} 
-                             genres= {p.genres} 
+                             name={p.name}
+                             image={p.image} 
+                             genres={p.genres} 
                              rating={p.rating}
                              />
-                          </Link>                      
-                        
-                    )})        
-                            
+                          </Link>                                          
+                    )})                                   
                 }
                 
-
               </div>
           </div>
-
-    )
-                     
+    )                     
 }

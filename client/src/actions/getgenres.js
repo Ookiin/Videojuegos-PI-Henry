@@ -1,5 +1,5 @@
 import { GET_GENRES } from '.';
-import axios from 'axios'
+import axios from 'axios';
 
 export default function getgenres() {
     return async function (dispatch){

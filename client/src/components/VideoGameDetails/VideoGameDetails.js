@@ -1,15 +1,11 @@
 import React, {useEffect} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-
 import stl from './VideoGameDetails.module.css';
-
 import { getClean } from '../../actions/getclean';
 import getvgamebyid from '../../actions/getvgamebyid'
 import deletegame from '../../actions/deletegame';
-
 import Loading from '../Loader/Loader';
-
 
 export default function VideoGameDetails(props) {
 
@@ -25,9 +21,7 @@ export default function VideoGameDetails(props) {
     
     useEffect(() => {
         dispatch(getvgamebyid(props.match.params.id))
-        return () => {
-            dispatch(getClean())
-        }
+        return () => { dispatch(getClean()) }
         // eslint-disable-next-line
     },[dispatch])
 
@@ -41,7 +35,6 @@ if (detail.db) {
     return (
         
         <div className={stl.card}>  
-
             <div className={stl.area}>
 
                 <div className={stl.detalles}>
@@ -53,14 +46,13 @@ if (detail.db) {
                         <h3 className={stl.descriptionName}>Description</h3>
                         <h5 className={stl.description}>{detail.description}</h5>
 
-                            <div className={stl.detalles}>
-                                 
+                            <div className={stl.detalles}>                             
                                 <h4 className={stl.rating}>{`Rating: ${detail.rating}`}</h4>
                             </div>
-                        
+
                             <div className={stl.detalles}>
-                                <h4>{`Released date: ${detail.released}`}</h4>
-                            </div>      
+                                <h4>{`Released date: ${detail.reldate}`}</h4>
+                            </div>  
 
                         <h4 className={stl.platforms}>{`Platforms: ${detail.platforms}`}</h4>
                         <h4 className={stl.genres}>{`Genres: ${detail.genres}`}</h4>
@@ -69,21 +61,17 @@ if (detail.db) {
                         <button className={stl.button}>Volver al Home</button>
                     </Link>
 
-
                     <div className={stl.contenedorDelete}>                   
                     <button className={stl.delete} onClick={handleDelete}>Eliminar Juego</button>
                 </div>
 
-            </div>  
-                            
+            </div>                              
         </div>  
-             
     ) 
 } else {
     return (
         
         <div className={stl.card}>  
-
             <div className={stl.area}>
 
                 <div className={stl.detalles}>
@@ -96,7 +84,6 @@ if (detail.db) {
                         <h5 className={stl.description}>{detail.description}</h5>
 
                             <div className={stl.detalles}>
-                                 
                                 <h4 className={stl.rating}>{`Rating: ${detail.rating}`}</h4>
                             </div>
                         
@@ -112,9 +99,7 @@ if (detail.db) {
                     </Link>
 
             </div>  
-                            
         </div>  
-    )
-}
+    )}
 }
 
