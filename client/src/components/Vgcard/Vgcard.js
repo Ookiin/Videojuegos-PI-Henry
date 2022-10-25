@@ -17,7 +17,7 @@ export default function Vgcard({name, image, genres, rating}) {
                 <h4 className={stl.name}>{name}</h4>
 
                 <img className={stl.imag} src={image} alt ='Not Found' />
-            
+
                 <p className={stl.genre}>{genre}</p>  
 
                 <span className={stl.rating}>{rating}</span>

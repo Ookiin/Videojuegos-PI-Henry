@@ -92,8 +92,8 @@ export default function rootReducer(state = initialState, action){
 
                     break;
                 
-                case GET_CLEAN:
-                    return { ...state, videodetails: [] }
+            case GET_CLEAN:
+                return { ...state, videodetails: [] };
 
         default:
             return state;

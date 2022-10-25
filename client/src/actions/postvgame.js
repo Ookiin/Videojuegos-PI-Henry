@@ -6,3 +6,4 @@ export default function postvgame(payload) {
         return dispatch({ type: POST_VGAME, payload: result.data })                                                                                                   
     }
 }
+

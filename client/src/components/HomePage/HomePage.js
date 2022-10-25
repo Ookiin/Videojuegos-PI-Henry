@@ -32,7 +32,7 @@ export default function HomePage () {
     const currentVgames = allVgames.slice(firstVgIndex,lastVgameIndex) 
 
     const actualPage = (pageNumber) => {setCurrentPage(pageNumber)}
-    
+  
     //Handlers
     function handleGenreFilter(e) {
         e.preventDefault();
@@ -71,7 +71,6 @@ export default function HomePage () {
         <Loading />
       </div>
     } 
-   
     
     return (
         <div className= {stl.paginaEntera} >
@@ -131,9 +130,9 @@ export default function HomePage () {
         </div>    
 
               <div className={stl.paginado}>
-
+              
                   <Paging vgamesPerPage={vgamesPerPage} allVgames={allVgames.length} currpage={currentPage} actualPage={actualPage}/>
-
+                  
               </div>
 
               <div className={stl.cardgame} > 

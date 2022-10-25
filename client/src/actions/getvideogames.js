@@ -7,3 +7,4 @@ export default function getvgames() {
         return dispatch({ type: GET_VIDEOGAMES, payload: result.data })                                                                                                 
     } catch (error) { console.log("Error en GET_VIDEOGAMES: ", error) }
 }}
+
