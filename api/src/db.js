@@ -3,7 +3,7 @@ const { Sequelize, Op } = require('sequelize');
 const fs = require('fs');
 const axios = require('axios');
 const path = require('path');
-const {DB_USER, DB_PASSWORD, DB_HOST, API_KEY, DB_NAME} = process.env;
+const {DB_USER, DB_PASSWORD, DB_HOST, API_KEY} = process.env;
 // let sequelize = 
 //   process.env.NODE_ENV === "videogames"
 //   ? new Sequelize({

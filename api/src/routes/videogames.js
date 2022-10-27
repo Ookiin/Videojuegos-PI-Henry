@@ -19,13 +19,11 @@ router.get('/', async (req, res) => {
         } else {
             async function SearchApi () {
 
-////////////////////  Voy a traer 3 paginas trayendo 50 videojuegos por pagina
+////////////////////  Voy a traer 3 paginas con 50 videojuegos por pagina
 
               try {  const promise1 = axios.get(`https://api.rawg.io/api/games?key=${apikey}&page=1&page_size=50`);
                      const promise2 = axios.get(`https://api.rawg.io/api/games?key=${apikey}&page=2&page_size=50`);
                      const promise3 = axios.get(`https://api.rawg.io/api/games?key=${apikey}&page=3&page_size=50`);
-
-//////////////////////  Concateno las respuestas con un promise.all(paralelo)
 
                      await Promise.all([promise1, promise2, promise3])
                         .then(function(values) { 
@@ -140,7 +138,7 @@ router.get('/', async (req, res) => {
          }
          const objdbgame = {
             name: searchdbvg.name,
-            platforms: searchdbvg.platform, 
+            platform: searchdbvg.platform, 
             reldate: searchdbvg.reldate, 
             image: "https://media.rawg.io/media/games/157/15742f2f67eacff546738e1ab5c19d20.jpg",
             description: searchdbvg.description,
