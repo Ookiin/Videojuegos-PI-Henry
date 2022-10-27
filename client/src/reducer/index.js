@@ -95,6 +95,7 @@ export default function rootReducer(state = initialState, action){
             case GET_CLEAN:
                 return { ...state, videodetails: [] };
 
+
         default:
             return state;
     }

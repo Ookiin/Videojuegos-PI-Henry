@@ -28,8 +28,8 @@ function validate(input) {
     } else if (!input.description) {
         errors.description = 'Se requiere una descripcion'
 
-    // } else if (input.genre.length === 0) {
-    //     errors.genre = 'Se requiere minimo un Genre'
+    } else if (input.genre.length === 0) {
+        errors.genre = 'Se requiere minimo un Genre'
     
     }
     return errors 
@@ -55,6 +55,10 @@ export default function AddVideogame() {
 
     allgenres = allgenres.filter(p => p !== 'All')
 
+    let repeatPlat = []
+    for (let i = 0; i < input.platform.length; i++) {
+        repeatPlat.push(input.platform[i]) 
+    }
 
     //Handlers  
     function handleOnChange(e) {
@@ -67,8 +71,9 @@ export default function AddVideogame() {
             [e.target.name]: e.target.value
         }))
      }
-     
+
      function handlePlatforms(e) {
+      if (!repeatPlat.includes(e.target.value))  
         setInput({
           ...input,
           platform: [...input.platform, e.target.value]
@@ -78,23 +83,23 @@ export default function AddVideogame() {
      function handleGenres(e) {
         setInput({
           ...input,
-          genre: [...input.genre, e.target.value]
-        })
+          genre: [...new Set([...input.genre, e.target.value])]   
+        }) 
      }
 
      function handleSubmit(e) {
          e.preventDefault()
          if (!input.name) {return alert('Nombre es requerido')}
         //  if (!/^\d{1,2}\-\d{1,2}\-\d{4}$/.test(input.reldate)) 
-            // {return alert('Formato erroneo de Release Date, deberia ser DD-MM-YYYY o D-M-YYYY')}
-        //  if (!input.rating) {return alert('Rating es requerido')}
+        //     {return alert('Formato erroneo de Release Date, deberia ser DD-MM-YYYY o D-M-YYYY')}
+         if (!input.rating) {return alert('Rating es requerido')}
          if (!/^(?:[1-9]\d{0,2}(?:,\d{3})*|0)(?:\.\d+)?$/.test(input.rating) || 
             input.rating < 0 || input.rating > 5) 
             {return alert('Formato erroneo de Rating, deberia ser un numero entre 0-5')
          }
          if (!input.description) {return alert('La descripcion es requerida')}
          if (input.platform.length === 0) {return alert('La Platform es requerida')}
-        //  if (input.genre.length === 0) {return alert('El Genre es requerido')}
+         if (input.genre.length === 0) {return alert('El Genre es requerido')}
 
          dispatch(postvgame(input))
          dispatch(getvgames())

@@ -9,4 +9,3 @@ export const deletegame = (id) => async (dispatch) => {
 
 export default deletegame
 
-

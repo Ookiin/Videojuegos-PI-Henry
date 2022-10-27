@@ -7,6 +7,7 @@ import getvgamebyid from '../../actions/getvgamebyid'
 import deletegame from '../../actions/deletegame';
 import Loading from '../Loader/Loader';
 
+
 export default function VideoGameDetails(props) {
 
     const dispatch = useDispatch()

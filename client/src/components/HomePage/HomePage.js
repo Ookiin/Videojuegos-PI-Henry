@@ -32,11 +32,12 @@ export default function HomePage () {
     const currentVgames = allVgames.slice(firstVgIndex,lastVgameIndex) 
 
     const actualPage = (pageNumber) => {setCurrentPage(pageNumber)}
-  
+
     //Handlers
     function handleGenreFilter(e) {
         e.preventDefault();
         dispatch(genrefilter(e.target.value))
+        setCurrentPage(1)
     }
   
     function handleOriginFilter(e) {
@@ -64,7 +65,6 @@ export default function HomePage () {
       if (allVgames.length === 0) 
       dispatch(getvideogames())
     }, [allVgames.length, dispatch])
-
 
     if (allVgames.length === 0) {
       return <div className={stl.loader}>
