@@ -144,7 +144,7 @@ router.get('/', async (req, res) => {
             description: searchdbvg.description,
             rating: searchdbvg.rating,
             genres: genrestr.toString(),
-            db: "Juego Creado"
+            db: "Juego creado"
          }
          return res.status(200).json(objdbgame) 
       }    
@@ -185,6 +185,26 @@ router.get('/', async (req, res) => {
     
     addVgame.addGenre(vg_genre)
     res.status(200).send('Has creado un nuevo juego')
+   });
+   
+   /////////////////////////////////            Modificar propiedades de un juego            /////////////////////////////////////////
+
+   router.put("/:id", async (req, res) => {
+    const { id } = req.params;
+    const { name, description, reldate, rating, platform, genre } = req.body;
+    try {
+      await Videogame.update({
+        name, description, reldate, rating, platform, genre
+      },
+      {
+        where: { id: id }
+      }
+      )
+    } catch (error) {
+      res.status(404).send("No se pudo actualizar el juego")
+    }
+     const update = await Videogame.findByPk(id)
+     res.send(update)
    });
 
   module.exports = router;
